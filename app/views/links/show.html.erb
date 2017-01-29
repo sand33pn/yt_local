@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @link.ranking %>
+</p>
+<p>
+  <strong>Thumbnail:</strong>
+  <% unless @link.thumbnail.blank? %>
+  	<%= image_tag @link.thumbnail %>
+  <% end %>	
+</p>
+<p>
+  <strong>Link text:</strong>
+  <%= @link.link_text %>
+</p>
+
+<p>
+  <strong>View Count:</strong>
+  <%= @link.view_count %>
+</p>
+
+<p>
+  <strong>Published At:</strong>
+  <%= @link.published_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
